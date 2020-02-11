@@ -60,11 +60,8 @@ var initDb = function(callback) {
   var mongodb = require("mongodb");
   if (mongodb == null) return;
 
-  console.log("mongo connect");
-
   mongodb.connect(mongoURL, function(err, conn) {
     if (err) {
-      console.log("error happened");
       callback(err);
       return;
     }
